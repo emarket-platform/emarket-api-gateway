@@ -6,8 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class EmarketApiGatewayApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(EmarketApiGatewayApplication.class, args);
-	}
-
+  public static void main(String[] args) {
+    SpringApplication.run(EmarketApiGatewayApplication.class, args);
+  }
 }

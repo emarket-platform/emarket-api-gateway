@@ -29,12 +29,11 @@ replay_pid*
 # Ignore Gradle build output directory
 build
 
-# Ignore IntelliJ IDEA project files
+# Ignore IntelliJ IDEA project files and folders
 .idea/
 *.iml
 *.iws
 *.ipr
-*.xml
 
 # Node.js
 node_modules/

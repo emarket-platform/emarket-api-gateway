@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+echo "Running Java formatting check..."
+
+if ! ./gradlew --no-daemon spotlessCheck; then
+    echo ""
+    echo "ERROR: Java formatting check failed."
+    echo ""
+    echo "Run the following command:"
+    echo "  ./gradlew spotlessApply"
+    echo ""
+    echo "Then stage the formatted files and commit again."
+
+    exit 1
+fi
+
+echo "Java formatting check passed."
