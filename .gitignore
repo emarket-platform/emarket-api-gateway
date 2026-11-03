@@ -23,6 +23,19 @@
 hs_err_pid*
 replay_pid*
 
+# Ignore Gradle project-specific cache directory
+.gradle
+
+# Ignore Gradle build output directory
+build
+
+# Ignore IntelliJ IDEA project files
+.idea/
+*.iml
+*.iws
+*.ipr
+*.xml
+
 # Node.js
 node_modules/
 npm-debug.log*

@@ -10,4 +10,7 @@
 #
 
 java=21.0.10-oracle
-gradle=8.5
+
+# Download specific gradle wrapper:
+# gradle wrapper --gradle-version 9.7.1
+gradle=9.7.1
