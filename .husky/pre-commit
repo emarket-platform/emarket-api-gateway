@@ -1,0 +1,13 @@
+#!/usr/bin/env sh
+
+set -eu
+
+echo "Running Spotless formatting..."
+
+./gradlew spotlessApply
+
+echo "Staging formatted Java files..."
+
+git add -- '*.java'
+
+echo "Spotless formatting completed successfully."

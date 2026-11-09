@@ -31,11 +31,20 @@ tasks.withType<Test> {
 }
 
 spotless {
-	java {
-		target("src/**/*.java")
+    java {
+        target("src/**/*.java")
 
-		googleJavaFormat("2.0.0")
+        // Expand wildcard imports into explicit imports.
+        expandWildcardImports()
+        //forbidWildcardImports()
 
-		formatAnnotations()
-	}
+        // Remove unused imports.
+        removeUnusedImports()
+
+        // Format Java code.
+        googleJavaFormat("2.0.0").reorderImports(true)
+
+        // Format annotations.
+        formatAnnotations()
+    }
 }
