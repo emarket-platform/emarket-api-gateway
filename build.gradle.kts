@@ -5,7 +5,7 @@ plugins {
 	id("com.diffplug.spotless") version "8.10.4"
 }
 
-group = "com.gmail.alexei28.emarket"
+group = "com.gmail.alexei28.emarket.api.gateway"
 version = "0.0.1-SNAPSHOT"
 
 java {
@@ -46,5 +46,25 @@ spotless {
 
         // Format annotations.
         formatAnnotations()
+    }
+}
+
+/*
+  * Spring Boot build metadata.
+  * Generates META-INF/build-info.properties.
+  */
+springBoot {
+    buildInfo()
+}
+
+tasks.processResources {
+    // Добавляем фильтрацию для баннера
+    filesMatching("banner.txt") {
+        filter { line ->
+            line.replace(
+                "@app.version@",
+                project.version.toString()
+            )
+        }
     }
 }

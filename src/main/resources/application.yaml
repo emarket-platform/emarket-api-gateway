@@ -1,3 +1,13 @@
+server:
+  port: 8080
+
 spring:
   application:
     name: emarket-api-gateway
+
+  profiles:
+    default: local
+
+  output:
+    ansi:
+      enabled: always # Включить поддержку ANSI
